@@ -1,4 +1,4 @@
-package com.bigtoapp.simplericktesttdd.details.core
+package com.bigtoapp.simplericktesttdd.details.core.presentation
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers

@@ -1,4 +1,4 @@
-package com.bigtoapp.simplericktesttdd.details.core
+package com.bigtoapp.simplericktesttdd.details.core.presentation
 
 import androidx.annotation.MainThread
 import androidx.lifecycle.LifecycleOwner
