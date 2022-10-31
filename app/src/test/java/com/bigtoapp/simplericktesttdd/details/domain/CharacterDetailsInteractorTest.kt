@@ -14,12 +14,12 @@ class CharacterDetailsInteractorTest {
     private lateinit var repository: TestCharactersRepository
     private lateinit var manageResources: TestManageResources
 
-    protected val detailsDomain = CharacterDetailsDomain(
+    private val detailsDomain = CharacterDetailsDomain(
         id = "42",
         name = "Morty Smith",
         status = "Alive",
         species = "Human",
-        gender = "male"
+        gender = "Male"
     )
 
     @Before

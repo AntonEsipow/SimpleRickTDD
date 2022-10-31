@@ -1,8 +1,7 @@
 package com.bigtoapp.simplericktesttdd.details.presentation
 
 import com.bigtoapp.simplericktesttdd.details.domain.CharacterDetailsDomain
-import com.bigtoapp.simplericktesttdd.details.domain.DetailsUiMapper
-import junit.framework.Assert
+import com.bigtoapp.simplericktesttdd.details.domain.DetailsDomainToUi
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -15,7 +14,7 @@ class DetailsResultMapperTest: BaseTest() {
     @Before
     fun setUp(){
         communications = TestCharacterDetailsCommunication()
-        mapper = DetailsResultMapper(communications, DetailsUiMapper())
+        mapper = DetailsResultMapper(communications, DetailsDomainToUi())
     }
 
     @Test

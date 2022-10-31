@@ -2,7 +2,7 @@ package com.bigtoapp.simplericktesttdd.details.domain
 
 import com.bigtoapp.simplericktesttdd.details.presentation.CharacterDetailsUi
 
-class DetailsUiMapper: CharacterDetailsDomain.Mapper<CharacterDetailsUi> {
+class DetailsDomainToUi: CharacterDetailsDomain.Mapper<CharacterDetailsUi> {
 
     override fun map(
         id: String,

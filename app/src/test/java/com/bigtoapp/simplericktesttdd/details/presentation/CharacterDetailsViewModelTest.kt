@@ -4,7 +4,7 @@ import android.view.View
 import com.bigtoapp.simplericktesttdd.details.core.presentation.DispatchersList
 import com.bigtoapp.simplericktesttdd.details.domain.CharacterDetailsInteractor
 import com.bigtoapp.simplericktesttdd.details.domain.DetailsResult
-import com.bigtoapp.simplericktesttdd.details.domain.DetailsUiMapper
+import com.bigtoapp.simplericktesttdd.details.domain.DetailsDomainToUi
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.TestCoroutineDispatcher
@@ -27,7 +27,7 @@ class CharacterDetailsViewModelTest: BaseTest() {
             HandleCharacterRequest.Base(
                 TestDispatchersList(),
                 communications,
-                DetailsResultMapper(communications, DetailsUiMapper())
+                DetailsResultMapper(communications, DetailsDomainToUi())
             ),
             communications,
             interactor
