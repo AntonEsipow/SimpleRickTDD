@@ -1,8 +1,5 @@
 package com.bigtoapp.simplericktesttdd.details.domain
 
-import com.bigtoapp.simplericktesttdd.details.core.Mapper
-import com.bigtoapp.simplericktesttdd.details.presentation.CharacterDetailsUi
-
 data class CharacterDetailsDomain(
     private val id: String = "",
     private val name: String = "",

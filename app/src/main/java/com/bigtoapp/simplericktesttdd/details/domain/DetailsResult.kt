@@ -1,6 +1,4 @@
-package com.bigtoapp.simplericktesttdd.details.presentation
-
-import com.bigtoapp.simplericktesttdd.details.domain.CharacterDetailsDomain
+package com.bigtoapp.simplericktesttdd.details.domain
 
 sealed class DetailsResult {
 
