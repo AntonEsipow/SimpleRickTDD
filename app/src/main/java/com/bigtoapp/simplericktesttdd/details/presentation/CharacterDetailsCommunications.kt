@@ -2,7 +2,7 @@ package com.bigtoapp.simplericktesttdd.details.presentation
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
-import com.bigtoapp.simplericktesttdd.details.core.Communication
+import com.bigtoapp.simplericktesttdd.details.core.presentation.Communication
 
 interface CharacterDetailsCommunications: ObserveDetails {
 

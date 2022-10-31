@@ -1,6 +1,7 @@
 package com.bigtoapp.simplericktesttdd.details.presentation
 
 import com.bigtoapp.simplericktesttdd.details.domain.CharacterDetailsDomain
+import com.bigtoapp.simplericktesttdd.details.domain.DetailsResult
 
 class DetailsResultMapper(
     private val communications: CharacterDetailsCommunications,

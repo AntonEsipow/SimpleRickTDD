@@ -1,7 +1,8 @@
 package com.bigtoapp.simplericktesttdd.details.presentation
 
 import android.view.View
-import com.bigtoapp.simplericktesttdd.details.core.DispatchersList
+import com.bigtoapp.simplericktesttdd.details.core.presentation.DispatchersList
+import com.bigtoapp.simplericktesttdd.details.domain.DetailsResult
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 

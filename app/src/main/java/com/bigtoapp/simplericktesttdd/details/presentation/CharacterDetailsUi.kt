@@ -1,7 +1,7 @@
 package com.bigtoapp.simplericktesttdd.details.presentation
 
 import android.widget.TextView
-import com.bigtoapp.simplericktesttdd.details.core.Mapper
+import com.bigtoapp.simplericktesttdd.details.core.presentation.Mapper
 
 data class CharacterDetailsUi(
     private val id: String,

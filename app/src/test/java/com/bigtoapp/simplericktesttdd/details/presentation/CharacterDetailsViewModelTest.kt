@@ -1,11 +1,9 @@
 package com.bigtoapp.simplericktesttdd.details.presentation
 
 import android.view.View
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.Observer
-import com.bigtoapp.simplericktesttdd.details.core.DispatchersList
-import com.bigtoapp.simplericktesttdd.details.domain.CharacterDetailsDomain
+import com.bigtoapp.simplericktesttdd.details.core.presentation.DispatchersList
 import com.bigtoapp.simplericktesttdd.details.domain.CharacterDetailsInteractor
+import com.bigtoapp.simplericktesttdd.details.domain.DetailsResult
 import com.bigtoapp.simplericktesttdd.details.domain.DetailsUiMapper
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.runBlocking
