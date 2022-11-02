@@ -44,5 +44,5 @@ interface DetailsStateCommunication: Communication.Mutable<UiState>{
 }
 
 interface ShowDetailsCommunication: Communication.Mutable<CharacterDetailsUi> {
-    class Base: Communication.Ui<CharacterDetailsUi>(), ShowDetailsCommunication
+    class Base: Communication.Post<CharacterDetailsUi>(), ShowDetailsCommunication
 }
