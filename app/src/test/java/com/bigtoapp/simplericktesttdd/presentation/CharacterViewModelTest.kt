@@ -18,16 +18,18 @@ class CharacterViewModelTest: BaseTest() {
     private lateinit var viewModel: CharacterViewModel
     private lateinit var interactor: TestCharacterDetailsInteractor
     private lateinit var communications: TestCharacterDetailsCommunication
+    private lateinit var testDomainToUi: TestCharacterDomainToUi
 
     @Before
     fun setUp() {
         interactor = TestCharacterDetailsInteractor()
         communications = TestCharacterDetailsCommunication()
+        testDomainToUi = TestCharacterDomainToUi()
         viewModel = CharacterViewModel.Base(
             HandleCharacterRequest.Base(
                 TestDispatchersList(),
                 communications,
-                CharacterResultMapper(communications, CharacterDomainToUi())
+                CharacterResultMapper(communications, testDomainToUi)
             ),
             communications,
             interactor

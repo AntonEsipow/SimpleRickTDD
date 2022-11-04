@@ -2,6 +2,7 @@ package com.bigtoapp.simplericktesttdd.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import com.bigtoapp.simplericktesttdd.R
@@ -20,10 +21,11 @@ class MainActivity : AppCompatActivity() {
         val progressBar = findViewById<ProgressBar>(R.id.progressBar)
         val nameTextView = findViewById<TextView>(R.id.nameTextView)
         val statusTextView = findViewById<TextView>(R.id.statusTextView)
+        val characterImageView = findViewById<ImageView>(R.id.characterImageView)
         val speciesTextView = findViewById<TextView>(R.id.speciesTextView)
-        val genderTextView = findViewById<TextView>(R.id.genderTextView)
+        val genderImageView = findViewById<ImageView>(R.id.genderImageView)
 
-        val mapper = DetailsUi(nameTextView, statusTextView, speciesTextView, genderTextView)
+        val mapper = CharacterUi(nameTextView, statusTextView, characterImageView, speciesTextView, genderImageView)
 
         // todo get id from list fragment
         // hardcode for test

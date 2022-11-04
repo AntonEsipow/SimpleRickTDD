@@ -18,6 +18,6 @@ class CharacterDataToDomain: CharacterData.Mapper<CharacterDomain> {
         type: String,
         url: String
     ): CharacterDomain = CharacterDomain(
-        id.toString(), name, status, species, gender
+        id, name, status, image, species, gender
     )
 }

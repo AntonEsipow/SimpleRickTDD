@@ -25,7 +25,7 @@ class CharacterRepositoryTest {
 
     // todo move out of here
     private val detailsDomain = CharacterDomain(
-        id = "42",
+        id = 42,
         name = "Morty Smith",
         status = "Alive",
         species = "Human",

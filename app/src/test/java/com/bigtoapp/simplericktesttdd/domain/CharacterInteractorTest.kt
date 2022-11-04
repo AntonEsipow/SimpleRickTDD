@@ -16,7 +16,7 @@ class CharacterInteractorTest {
     private lateinit var manageResources: TestManageResources
 
     private val detailsDomain = CharacterDomain(
-        id = "42",
+        id = 42,
         name = "Morty Smith",
         status = "Alive",
         species = "Human",

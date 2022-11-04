@@ -20,7 +20,7 @@
         android:id="@+id/nameTextView"
         tools:text="Morty Smith"
         android:textColor="@color/black"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
         android:padding="@dimen/padding_small"/>
 
     <TextView
@@ -29,7 +29,27 @@
         android:id="@+id/statusTextView"
         tools:text="Alive"
         android:textColor="@color/black"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        android:padding="@dimen/padding_small"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/characterImageView"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_margin="@dimen/margin_small"
+        android:elevation="4dp"
+        android:padding="1dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.SimpleRick"
+        tools:src="@tools:sample/backgrounds/scenic[7]" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/species"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
         android:padding="@dimen/padding_small"/>
 
     <TextView
@@ -44,10 +64,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/genderTextView"
-        tools:text="Male"
+        android:text="@string/gender"
         android:textColor="@color/black"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
         android:padding="@dimen/padding_small"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/genderImageView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="@dimen/margin_small"
+        tools:srcCompat="@drawable/ic_male_24"
+        app:tint="?colorOnSurface"/>
 
 </LinearLayout>

@@ -3,4 +3,6 @@
     <!-- Domain error messages-->
     <string name="no_connection_message">No internet connection</string>
     <string name="service_is_unavailable">Service is unavailable</string>
+    <string name="species">Species</string>
+    <string name="gender">Gender</string>
 </resources>

@@ -10,11 +10,13 @@ class CharacterResultMapperTest: BaseTest() {
 
     private lateinit var communications: TestCharacterDetailsCommunication
     private lateinit var mapper: CharacterResultMapper
+    private lateinit var testDomainToUi: TestCharacterDomainToUi
 
     @Before
     fun setUp(){
         communications = TestCharacterDetailsCommunication()
-        mapper = CharacterResultMapper(communications, CharacterDomainToUi())
+        testDomainToUi = TestCharacterDomainToUi()
+        mapper = CharacterResultMapper(communications, testDomainToUi)
     }
 
     @Test
