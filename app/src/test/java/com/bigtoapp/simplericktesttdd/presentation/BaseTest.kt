@@ -3,8 +3,10 @@ package com.bigtoapp.simplericktesttdd.presentation
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import com.bigtoapp.simplericktesttdd.R
+import com.bigtoapp.simplericktesttdd.core.presentation.NavigationStrategy
 import com.bigtoapp.simplericktesttdd.domain.character.CharacterDomain
 import com.bigtoapp.simplericktesttdd.domain.character.CharacterDomainToUi
+import com.bigtoapp.simplericktesttdd.presentation.main.NavigationCommunication
 
 abstract class BaseTest {
 
@@ -68,6 +70,19 @@ abstract class BaseTest {
                 "female" -> 2
                 else -> 3
             }
+        }
+    }
+
+    protected class TestNavigationCommunication: NavigationCommunication.Mutable {
+
+        lateinit var strategy: NavigationStrategy
+        var count = 0
+
+        override fun observe(owner: LifecycleOwner, observer: Observer<NavigationStrategy>) = Unit
+
+        override fun map(source: NavigationStrategy) {
+            strategy = source
+            count++
         }
     }
 }

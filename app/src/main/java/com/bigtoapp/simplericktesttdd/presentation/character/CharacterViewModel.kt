@@ -1,10 +1,11 @@
-package com.bigtoapp.simplericktesttdd.presentation
+package com.bigtoapp.simplericktesttdd.presentation.character
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bigtoapp.simplericktesttdd.domain.CharacterInteractor
+import com.bigtoapp.simplericktesttdd.presentation.*
 
 interface CharacterViewModel: ObserveCharacter {
 

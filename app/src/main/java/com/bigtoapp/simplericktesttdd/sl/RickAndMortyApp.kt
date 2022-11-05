@@ -4,7 +4,6 @@ import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStoreOwner
-import com.bigtoapp.simplericktesttdd.core.sl.DependencyContainer
 import com.bigtoapp.simplericktesttdd.core.sl.ProvideViewModel
 import com.bigtoapp.simplericktesttdd.core.sl.ViewModelsFactory
 

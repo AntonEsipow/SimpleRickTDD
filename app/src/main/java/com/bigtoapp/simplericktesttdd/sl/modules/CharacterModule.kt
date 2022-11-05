@@ -1,4 +1,4 @@
-package com.bigtoapp.simplericktesttdd.sl
+package com.bigtoapp.simplericktesttdd.sl.modules
 
 import com.bigtoapp.simplericktesttdd.core.domain.HandleError
 import com.bigtoapp.simplericktesttdd.core.sl.Module
@@ -12,6 +12,8 @@ import com.bigtoapp.simplericktesttdd.domain.CharacterInteractor
 import com.bigtoapp.simplericktesttdd.domain.character.CharacterDomainToUi
 import com.bigtoapp.simplericktesttdd.domain.HandleDomainRequest
 import com.bigtoapp.simplericktesttdd.presentation.*
+import com.bigtoapp.simplericktesttdd.presentation.character.CharacterViewModel
+import com.bigtoapp.simplericktesttdd.sl.Core
 
 class CharacterModule(private val core: Core): Module<CharacterViewModel.Base> {
 

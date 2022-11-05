@@ -1,10 +1,13 @@
-package com.bigtoapp.simplericktesttdd.presentation
+package com.bigtoapp.simplericktesttdd.presentation.character
 
 import android.view.View
 import com.bigtoapp.simplericktesttdd.core.presentation.DispatchersList
 import com.bigtoapp.simplericktesttdd.domain.CharacterInteractor
 import com.bigtoapp.simplericktesttdd.domain.CharacterResult
-import com.bigtoapp.simplericktesttdd.domain.character.CharacterDomainToUi
+import com.bigtoapp.simplericktesttdd.presentation.BaseTest
+import com.bigtoapp.simplericktesttdd.presentation.CharacterResultMapper
+import com.bigtoapp.simplericktesttdd.presentation.HandleCharacterRequest
+import com.bigtoapp.simplericktesttdd.presentation.UiState
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.TestCoroutineDispatcher
