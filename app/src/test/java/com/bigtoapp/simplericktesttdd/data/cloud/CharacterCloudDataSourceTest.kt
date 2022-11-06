@@ -1,6 +1,8 @@
 package com.bigtoapp.simplericktesttdd.data.cloud
 
 import com.bigtoapp.simplericktesttdd.data.character.CharacterData
+import com.bigtoapp.simplericktesttdd.data.character.cloud.MockCharacterService
+import com.bigtoapp.simplericktesttdd.data.character.cloud.MockCharacterResponse
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Test
@@ -11,13 +13,14 @@ class CharacterCloudDataSourceTest {
         id = 1,
         name = "Morty Smith",
         status = "Alive",
+        image = "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
         gender = "Male",
-        species = "human"
+        species = "Human"
     )
 
     @Test
     fun `test fetch data`() = runBlocking{
-        val response = MockResponse()
+        val response = MockCharacterResponse()
         val service = MockCharacterService(response)
         val dataSource = CharacterCloudDataSource.Base(service)
 
