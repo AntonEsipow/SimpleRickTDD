@@ -7,9 +7,15 @@ interface ProvideModuleInstances {
     // todo provide cache module later
     fun provideCloudModule(): CloudModule
 
-    class Debug(): ProvideModuleInstances {
+    class Debug: ProvideModuleInstances {
         override fun provideCloudModule(): CloudModule = CloudModule.Debug()
     }
 
-    // todo provide Release and Mock Instances
+    class Release: ProvideModuleInstances {
+        override fun provideCloudModule(): CloudModule = CloudModule.Release()
+    }
+
+    class Mock: ProvideModuleInstances {
+        override fun provideCloudModule(): CloudModule = CloudModule.Mock()
+    }
 }

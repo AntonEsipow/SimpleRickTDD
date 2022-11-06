@@ -1,5 +1,7 @@
 package com.bigtoapp.simplericktesttdd.data.cloud
 
+import com.bigtoapp.simplericktesttdd.data.character.cloud.MockCharacterService
+import com.bigtoapp.simplericktesttdd.data.character.cloud.MockCharacterResponse
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -11,15 +13,20 @@ interface CloudModule {
 
     fun <T> service(clazz: Class<T>): T
 
-    class Debug: CloudModule {
+    class Mock: CloudModule {
+        override fun <T> service(clazz: Class<T>): T = MockCharacterService(MockCharacterResponse()) as T
+    }
+
+    abstract class Abstract(
+        private val loggingLevel: HttpLoggingInterceptor.Level
+    ): CloudModule {
 
         override fun <T> service(clazz: Class<T>): T {
-            // todo make abstract values as in coreMVVM
             val moshi = Moshi.Builder()
                 .addLast(KotlinJsonAdapterFactory())
                 .build()
             val interceptor = HttpLoggingInterceptor().apply {
-                setLevel(HttpLoggingInterceptor.Level.BODY)
+                setLevel(loggingLevel)
             }
             val client = OkHttpClient.Builder()
                 .addInterceptor(interceptor)
@@ -36,4 +43,7 @@ interface CloudModule {
             private const val BASE_URL: String = "https://rickandmortyapi.com/api/"
         }
     }
+
+    class Debug: Abstract(HttpLoggingInterceptor.Level.BODY)
+    class Release: Abstract(HttpLoggingInterceptor.Level.NONE)
 }

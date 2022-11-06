@@ -9,9 +9,6 @@ interface CharacterCloudDataSource {
 
     class Base(
         private val service: CharacterService
-        // todo add dependency to map request body
-        // release and mock realization
-        // make mock service
     ): CharacterCloudDataSource {
 
         override suspend fun fetchCharacterDetails(id: String): CharacterData {
