@@ -5,4 +5,5 @@
     <string name="service_is_unavailable">Service is unavailable</string>
     <string name="species">Species</string>
     <string name="gender">Gender</string>
+    <string name="search_character">search character</string>
 </resources>
